@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ondalRoom</title>
+<!-- <link rel="stylesheet" href="kajaroom.css"> -->
+</head>
+<body>
+<h1>OndalRoom</h1>
+<form action="makeReservation.jsp">
+<table border=0>
+<tr>
+	<td width=50%>
+		<img src="pictures/ondal.jpg" width="100%" >
+	</td>
+	<td  width=50% align="center">
+		<p>프리미어 더블, 1킹베드,공원 전망</p>
+	
+		<p>인원 : 성인 2명 </p>
+	
+		<p>1박 요금 : 130,000KRW </p>
+	</td>
+</tr>
+<tr align="left">
+	<td></td>
+	<td align="center">
+	지금 당장 예약하려면! <input type="submit"  value="예약하기" >
+	</td>
+</tr>
+</table>
+</form>
+
+
+
+</body>
+</html>
