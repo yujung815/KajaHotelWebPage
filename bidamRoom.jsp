@@ -15,21 +15,17 @@
 <table border=0>
 <tr>
 	<td width=50%>
-		<img src="pictures/ondal.jpg" width="100%" >
+		<img src="pictures/bidam.jpg" width="100%" >
 	</td>
 	<td  width=50% align="center">
-		<p>프리미어 더블, 1킹베드,공원 전망</p>
+		<p>프리미어 트윈, 2개 더블베드,시티 전망</p>
 	
 		<p>인원 : 성인 2명 </p>
 	
 		<p>1박 요금 : 130,000KRW </p>
+	<P><b>지금 당장 예약하려면!</b> <input type="submit"  value="예약하기" ></P>
 	</td>
-</tr>
-<tr align="left">
-	<td></td>
-	<td align="center">
-	지금 당장 예약하려면! <input type="submit"  value="예약하기" >
-	</td>
+
 </tr>
 </table>
 </form>
