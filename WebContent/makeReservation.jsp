@@ -29,10 +29,10 @@
 					<option name="card" value="VISA">VISA</option>
 				</select>
 				
-				<input type="number"  value="card1" width="20%" maxlength="4" required>
-				-<input type="number" value="card2" width="20%" maxlength="4" required>
-				-<input type="number" value="card3" width="20%" maxlength="4" required>
-				-<input type="number" value="card4" width="20%" maxlength="4" required>
+				<input type="number"  value="card1" width="5px" maxlength="4" required>
+				-<input type="number" value="card2" width="5px" maxlength="4" required>
+				-<input type="number" value="card3" width="5px" maxlength="4" required>
+				-<input type="number" value="card4" width="5px" maxlength="4" required>
 			</p>
 			
 			<input type="submit" value="예약하기">
