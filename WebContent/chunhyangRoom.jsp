@@ -6,12 +6,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<% 
+request.setCharacterEncoding("UTF-8");
+response.setCharacterEncoding("UTF-8");
+%>
 <title>chunhyangRoom</title>
 <!-- <link rel="stylesheet" href="kajaroom.css"> -->
+<jsp:include page="header.jsp"></jsp:include>
+
 </head>
 <body>
-<h1>ChunhyangRoom</h1>
-<form action="loginCheck.do">
+<form action="makeReservation.jsp" method="post">
+<div>
 <table border=0>
 <tr>
 	<td width=50%>
@@ -19,6 +25,8 @@
 		<input type="hidden" name="picture" value="pictures/chunhyang.jpg">
 	</td>
 	<td  width=50% align="center">
+		<P><h1>Chunhyang Room</h1><p>
+		<input type="hidden" name="roomname" value="Chunhyang Room">
 		<p>패밀리 스위트, 시티전망 </p>
 		<input type="hidden" name="roomtype" value="패밀리 스위트, 시티전망">
 		<p>인원 : 성인 2명, 자녀 2명 </p>
@@ -29,8 +37,10 @@
 	</td>
 </tr>
 </table>
+</div>
 </form>
 
+<jsp:include page="footer.jsp"></jsp:include>
 
 
 </body>

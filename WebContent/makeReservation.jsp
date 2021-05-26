@@ -5,11 +5,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<% 
+request.setCharacterEncoding("UTF-8");
+response.setCharacterEncoding("UTF-8");
+%>
 <title> </title>
 </head>
 <body>
-<h1>예약하기</h1>
-<form action="bk_chk.jpg" method="post">
+<jsp:include page="header.jsp"></jsp:include>
+
+<form action="bk_chk.jsp" method="post">
 <table border=1 align="center">
 	<tr>
 		<td width="50%"  >
@@ -17,6 +22,7 @@
 		</td>
 	
 		<td  width="50%" align="center">
+			<h2>${param.roomname }</h2>
 			<P>룸타입: ${param.roomtype }</P><br>
 			<p>1박 요금: ${param.price }</p><br>
 			<p>체크인날짜 선택<input type="date" name="checkindate"></p><br>
