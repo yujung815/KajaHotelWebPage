@@ -1,0 +1,138 @@
+drop table user_table;
+-------------------------------------------------
+desc user_table;
+-------------------------------------------------
+CREATE TABLE user_table (
+    user_no number(5) primary key not null,
+    id varchar2(20) ,
+    pw varchar2(20),
+    name varchar2(20),
+    tel varchar2(20),
+    email varchar2(50),
+    subs number(2) default 0,
+    status number(2) default 0
+);
+------------------------------------------------------
+drop sequence user_seq; 
+
+CREATE SEQUENCE user_seq 
+MINVALUE 1 
+MAXVALUE 99999 
+INCREMENT BY 1 
+START WITH 1 ;
+---------------------------------------------------------
+
+CREATE OR REPLACE TRIGGER "HR"."numup" 
+before insert on user_table
+for each row
+
+Begin
+    select USER_SEQ.nextval
+    into :new.user_no
+    from dual;
+end;
+---------------------------------------------------
+
+ALTER TRIGGER "HR"."numup" ENABLE;
+-----------------------------------------
+commit;
+--------------------------------------------------
+
+----------------------------------------------
+select * from user_table;
+-----------------------------------------------------
+
+
+--고객센터
+drop table cs_table;
+---------------------------------------------------------------
+CREATE TABLE cs_table (
+    cs_no number(5),
+    user_no varchar2(50),
+    e_mail varchar2(50),
+    cs_title varchar2(100),
+    cs_content varchar2(200),
+    REGDATE DATE DEFAULT SYSDATE,
+    status number(2) default 0
+);
+
+------------------------------------------------------------------
+drop sequence cs_seq; 
+---------------------------------------------------------------
+CREATE SEQUENCE cs_seq 
+MINVALUE 1 
+MAXVALUE 99999 
+INCREMENT BY 1 
+START WITH 1 ;
+
+commit;
+
+-----------------------------------------------------------------------------------
+select * from cs_table;
+-------------------------------------------------------------------------------------
+
+
+--동영상 콘텐츠
+drop table content_table;
+
+CREATE TABLE content_table (
+    con_no number(5) ,
+    title varchar2(50),
+    category varchar2(20),
+    new_no number(2),
+    pop number(2),
+    free number(2),
+    video_uri varchar2(100),
+    thumb_uri varchar2(100)
+);
+
+SELECT * FROM content_table;
+drop sequence con_seq;
+
+CREATE SEQUENCE con_seq 
+MINVALUE 1 
+MAXVALUE 99999 
+INCREMENT BY 1 
+START WITH 1 ;
+
+commit;
+
+select * from content_table;
+ 
+
+----------------------------------------------------------------------------
+
+DROP TABLE comment_table;
+
+CREATE TABLE comment_table(
+    con_no number(10),
+    id varchar2(20),
+    uptime date default sysdate,
+    comment_user varchar2(200),
+    score number(5)
+);
+
+commit;
+
+select * from comment_table;
+
+----------------------------------------------------------------
+drop table wish_table;
+
+CREATE TABLE wish_table (
+    user_id varchar2(20),
+    con_no number(2) default 0
+);
+
+select * from wish_table;
+
+----------------------------------------------------------------
+
+drop table pay;
+
+CREATE TABLE pay(
+    id varchar2(20),
+    lastday date default SYSDATE + 30
+);
+SELECT * FROM pay;
+commit;
